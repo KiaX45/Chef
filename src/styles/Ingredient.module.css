@@ -1,0 +1,77 @@
+.container {
+    max-width: 600px;
+    margin: 0;
+    padding: 12px;
+  }
+
+
+  .container span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+
+  
+
+  
+  .list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e5e5;
+    margin-bottom: 8px;
+    transition: border-color 0.2s ease;
+  }
+  
+  .item:hover {
+    border-color: #d1d1d1;
+    background-color: #f3f3f3;
+  }
+  
+  .ingredientName {
+    color: #333;
+  }
+  
+  .deleteButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+  }
+  
+  .deleteButton:hover {
+    background-color: #B3B2AE;
+  }
+  
+  .deleteButton.clicked {
+    background-color: #ffe5e5;
+    transform: scale(0.9);
+  }
+  
+  .trashIcon {
+    width: 20px;
+    height: 20px;
+    color: #333;
+    transition: color 0.2s ease;
+  }
+  
+  .deleteButton:hover .trashIcon {
+    color: #666;
+  }
+  
+  .deleteButton.clicked .trashIcon {
+    color: #ff4d4d;
+  }

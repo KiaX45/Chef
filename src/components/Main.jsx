@@ -1,19 +1,30 @@
 import React from "react"
 import IngredientsList from "./IngredientsList"
 import ClaudeRecipe from "./ClaudeRecipe"
-import {getRecipeFromMistral } from "../logic/ai"
+import { getRecipeFromMistral } from "../logic/ai"
 
 export default function Main() {
     const [ingredients, setIngredients] = React.useState(
         ["chicken", "all the main spices", "corn", "heavy cream", "pasta"]
     )
+
+    const deleteFunction = (key) => {
+        console.log(key)
+        setIngredients(prevIngredients => {
+           return prevIngredients.filter((ingredient, index) => index !== key)
+        })
+
+    }
+
+
+
     const [recipe, setRecipe] = React.useState("")
 
     const inputRef = React.useRef(null)
 
     async function getRecipe() {
-       const recipeMarkdown = await getRecipeFromMistral(ingredients)
-       console.log(recipeMarkdown)
+        const recipeMarkdown = await getRecipeFromMistral(ingredients)
+        console.log(recipeMarkdown)
         setRecipe(recipeMarkdown)
     }
 
@@ -42,6 +53,7 @@ export default function Main() {
                 <IngredientsList
                     ingredients={ingredients}
                     getRecipe={getRecipe}
+                    deleteFunction={deleteFunction}
                 />
             }
 
