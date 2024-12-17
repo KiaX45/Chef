@@ -1,6 +1,6 @@
 import Ingredient from "./Ingredient"
 import Button from "./Button"
-
+import img from "../images/cookingLogo.png"
 
 
 export default function IngredientsList(props) {
@@ -17,7 +17,10 @@ export default function IngredientsList(props) {
     return (
         <section>
             <h2>Ingredients on hand:</h2>
+            <div className="ingredients-container" >
             <ul className="ingredients-list" aria-live="polite">{ingredientsListItems}</ul>
+            <img src={img} alt="logo del chef"  />
+            </div>
             {props.ingredients.length > 3 && <div className="get-recipe-container">
                 <div>
                     <h3>Ready for a recipe?</h3>

@@ -69,6 +69,26 @@ main {
   margin-right: 5px;
 }
 
+.ingredients-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.ingredients-container>ul {
+  width: 600px;
+  margin-right: 100px;
+}
+
+.ingredients-container>img {
+  width: 700px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+  
+}
+
+
 ul.ingredients-list {
   margin-bottom: 48px;
 }
